@@ -1,4 +1,6 @@
-Sistema de fast-food, Esse projeto foi bem interessante e dessafiador me ensinou a lidar melhor com strings e tabelas na marra.
+# Projeto-Fast-Food
+
+Fiz um sistema de venda de Fast-Food completo(ou quase), Esse projeto foi bem interessante e dessafiador me ensinou a lidar melhor com strings e tabelas na marra.
 
 Esse projeto foi muito interessante de fazer e estudar, foi uma alegria terminar ele e ver tudo funcionando da forma que deveria.
 
