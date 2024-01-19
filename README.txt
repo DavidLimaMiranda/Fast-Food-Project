@@ -8,7 +8,7 @@ Melhorei bastante no conceito em separar funcionalidades e manipular entidades.
 
 _________________________________________________________________________________
 
-Os formatos das requisições são esses: 
+Os formatos das requisições são esses, Use o postman ou insomnia para fazer requisições: 
 
 http://localhost:8080/clients, Post e Get estão nesse Http.
 
