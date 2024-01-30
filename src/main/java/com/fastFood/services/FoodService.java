@@ -76,11 +76,13 @@ public class FoodService {
         return value;
     }
 
-    public void verificationStockFood(Food food) throws Exception {
+    public boolean verificationStockFood(Food food) throws Exception {
 
-        if(food.getStock() < 0)
+        if(food.getStock() <= 0)
         {
             throw new Exception("Lanche fora de stock");
         }
+
+        return true;
     }
 }
