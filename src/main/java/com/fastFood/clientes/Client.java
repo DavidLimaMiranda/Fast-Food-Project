@@ -3,7 +3,6 @@ package com.fastFood.clientes;
 import com.fastFood.dtos.ClientDTO;
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.math.BigDecimal;
 
 @Entity(name = "clientes")

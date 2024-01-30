@@ -58,7 +58,7 @@ public class TransactionService {
         return newTransaction;
     }
 
-    public void validateTransaction(Client client, BigDecimal value) throws Exception {
+    public boolean validateTransaction(Client client, BigDecimal value) throws Exception {
 
         if(client.getTypeAccount() == TypeClient.COMPANY)
         {
@@ -69,6 +69,7 @@ public class TransactionService {
         {
             throw new Exception("Você não possui essa quantia em seu saldo no momento para realizar essa compra.");
         }
+        return true;
     }
 
 
