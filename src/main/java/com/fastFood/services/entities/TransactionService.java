@@ -1,9 +1,8 @@
-package com.fastFood.services;
+package com.fastFood.services.entities;
 
 import com.fastFood.clientes.Client;
 import com.fastFood.clientes.TypeClient;
 import com.fastFood.dtos.TransactionDTO;
-import com.fastFood.food.Food;
 import com.fastFood.repositories.TransactionRepository;
 import com.fastFood.transaction.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;

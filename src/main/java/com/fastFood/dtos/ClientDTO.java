@@ -11,5 +11,6 @@ public record ClientDTO(
         @NotBlank String lastName,
         @NotNull BigDecimal balance,
         @NotBlank String email,
+        @NotBlank String password,
         @NotNull TypeClient typeAccount) {
 }

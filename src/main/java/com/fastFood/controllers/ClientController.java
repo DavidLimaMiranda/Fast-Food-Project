@@ -2,7 +2,7 @@ package com.fastFood.controllers;
 
 import com.fastFood.clientes.Client;
 import com.fastFood.dtos.ClientDTO;
-import com.fastFood.services.ClientService;
+import com.fastFood.services.entities.ClientService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -26,11 +26,20 @@ public class ClientController {
         return new ResponseEntity<>(newClient, HttpStatus.CREATED);
     }
 
-    @GetMapping
+    @GetMapping("/getAll")
     public ResponseEntity<List<Client>> getAllClients() {
         
         List<Client> clients = this.clientService.getAllClients();
 
         return new ResponseEntity<>(clients, HttpStatus.OK);
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Client> getClientId(@PathVariable Long id) throws Exception {
+
+        Client client = this.clientService.findClientById(id);
+
+        return new ResponseEntity<>(client, HttpStatus.OK);
+    }
+
 }

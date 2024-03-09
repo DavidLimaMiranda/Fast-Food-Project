@@ -30,6 +30,7 @@ public class ClientRepositoryTest {
                 "Company",
                 "fast-food",
                 new BigDecimal(1000),
+                "1234",
                 "company20@email.com",
                 TypeClient.COMPANY);
         this.createUser(data);

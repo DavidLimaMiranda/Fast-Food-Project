@@ -2,7 +2,7 @@ package com.fastFood.food;
 
 import com.fastFood.dtos.FoodDTO;
 import com.fastFood.repositories.FoodRepository;
-import com.fastFood.services.FoodService;
+import com.fastFood.services.entities.FoodService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

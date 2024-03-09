@@ -1,7 +1,7 @@
 package com.fastFood.controllers;
 
 import com.fastFood.dtos.FoodDTO;
-import com.fastFood.services.FoodService;
+import com.fastFood.services.entities.FoodService;
 import com.fastFood.food.Food;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/MakeOrder")
+@RequestMapping("/menu")
 public class FoodController {
 
     @Autowired
@@ -33,7 +33,7 @@ public class FoodController {
 
         return new ResponseEntity<>(food, HttpStatus.FOUND);
     }
-    @PostMapping
+    @PostMapping("/food")
     public ResponseEntity<Food> createNewFood(@RequestBody @Valid FoodDTO food) throws Exception {
 
         var newFood = this.foodService.createFood(food);

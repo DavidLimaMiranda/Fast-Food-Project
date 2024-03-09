@@ -5,9 +5,9 @@ import com.fastFood.clientes.TypeClient;
 import com.fastFood.dtos.TransactionDTO;
 import com.fastFood.food.Food;
 import com.fastFood.repositories.TransactionRepository;
-import com.fastFood.services.ClientService;
-import com.fastFood.services.FoodService;
-import com.fastFood.services.TransactionService;
+import com.fastFood.services.entities.ClientService;
+import com.fastFood.services.entities.FoodService;
+import com.fastFood.services.entities.TransactionService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -46,8 +46,8 @@ public class TransactionServiceTest {
     @DisplayName("Caso de suceeso com tudo funcionando corretamente")
     void createTransactionCaseSucesse() throws Exception {
 
-        var company = new Client(1l, "company", "empresa", "company@gmail.com", new BigDecimal(100), TypeClient.COMPANY);
-        var client = new Client(2l, "David", "Lima", "davidTeste@gmail.com", new BigDecimal(20), TypeClient.CLIENT);
+        var company = new Client(1l, "company", "empresa", "company@gmail.com", "1234", new BigDecimal(100), TypeClient.COMPANY);
+        var client = new Client(2l, "David", "Lima", "davidTeste@gmail.com", "1234", new BigDecimal(20), TypeClient.CLIENT);
 
         var lanche = new Food(1l, "Hamburguer", "Delicioso", 3, new BigDecimal(15));
 
@@ -73,8 +73,8 @@ public class TransactionServiceTest {
     @DisplayName("Caso de fracasso da requisição por conflito nos valores")
     void createTransactionCaseFailValue() throws Exception {
 
-        var company = new Client(1l, "company", "empresa", "company@gmail.com", new BigDecimal(100), TypeClient.COMPANY);
-        var client = new Client(2l, "David", "Lima", "davidTeste@gmail.com", new BigDecimal(10), TypeClient.CLIENT);
+        var company = new Client(1l, "company", "empresa", "company@gmail.com", "12345",new BigDecimal(100), TypeClient.COMPANY);
+        var client = new Client(2l, "David", "Lima", "davidTeste@gmail.com", "12345", new BigDecimal(10), TypeClient.CLIENT);
 
         var lanche = new Food(1l, "Hamburguer", "Delicioso", 3, new BigDecimal(15));
 
@@ -97,8 +97,8 @@ public class TransactionServiceTest {
     @DisplayName("Caso de fracasso da requisição por conflito no tipo do cliente")
     void createTransactionCaseFailTypeClient() throws Exception {
 
-        var company = new Client(1l, "company", "empresa", "company@gmail.com", new BigDecimal(100), TypeClient.COMPANY);
-        var client = new Client(2l, "David", "Lima", "davidTeste@gmail.com", new BigDecimal(20), TypeClient.CLIENT);
+        var company = new Client(1l, "company", "empresa", "company@gmail.com", "123456",new BigDecimal(100), TypeClient.COMPANY);
+        var client = new Client(2l, "David", "Lima", "davidTeste@gmail.com", "123456",new BigDecimal(20), TypeClient.CLIENT);
 
         var lanche = new Food(1l, "Hamburguer", "Delicioso", 3, new BigDecimal(15));
 

@@ -3,6 +3,7 @@ CREATE TABLE Clientes (
     first_name VARCHAR(255),
     last_name VARCHAR(255),
     email VARCHAR(255) UNIQUE,
+    passwords VARCHAR(255),
     balance DECIMAL,
     type_account VARCHAR(50)
 );

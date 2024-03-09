@@ -1,4 +1,4 @@
-package com.fastFood.services;
+package com.fastFood.services.entities;
 
 import com.fastFood.dtos.FoodDTO;
 import com.fastFood.repositories.FoodRepository;

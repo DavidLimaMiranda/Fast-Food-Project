@@ -1,8 +1,7 @@
 package com.fastFood.controllers;
 
-import com.fastFood.clientes.Client;
 import com.fastFood.dtos.TransactionDTO;
-import com.fastFood.services.TransactionService;
+import com.fastFood.services.entities.TransactionService;
 import com.fastFood.transaction.Transaction;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,13 +12,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/makeRequest")
+@RequestMapping("/transaction")
 public class TransactionController {
 
     @Autowired
     private TransactionService transactionService;
 
-    @GetMapping
+    @GetMapping("/getAll")
     public ResponseEntity<List<Transaction>> getAllTransactions() {
 
         List<Transaction> transactions = this.transactionService.getAllTransactions();
