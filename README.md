@@ -16,7 +16,7 @@ http://localhost:8080/clients/{id}, Http Get passando um Id para encontrar um Cl
 
 Para criar um Cliente do Fast-Food:
 
-{
+	{
 	"firstName": "McDonalds",		
  	// nome da empressa/cliente
   
@@ -34,50 +34,51 @@ Para criar um Cliente do Fast-Food:
   
 	"typeAccount": "COMPANY"		
  	// Tipo da conta criada, "COMPANY" para empressas e ter acesso total, "CLIENT" para clientes.
-}
+	}
 ________________________________________________________________________________
 
 http://localhost:8080/auth/login
 
-Para logar e pegar o Token recebido para fazer outras requisições
-{
-    "email": "company@gmail.com",
+Para logar e pegar o Token recebido para fazer outras requisições:
+	
+ 	{
+    	"email": "company@gmail.com",
     
-    "password": "1234"
+    	"password": "1234"
     
-}
+	}
 ________________________________________________________________________________
 
 http://localhost:8080/menu/food, Post está nesse Http, get em /menu/getAll
 
 Para criar um lanche/Produto:
 
-{
-    "foodName": "Hamburguer",			
-    // Nome do lanche/produto 
+	{
+    	"foodName": "Hamburguer",			
+    	// Nome do lanche/produto 
 
-    "description": "Hamburguer clássico",	
-    // Descrição do lanche/produto criado
+    	"description": "Hamburguer clássico",	
+    	// Descrição do lanche/produto criado
  
-    "stock": 3,					
-    // Quantidade de lanches/produtos 
+    	"stock": 3,					
+    	// Quantidade de lanches/produtos 
 
-    "price": 15	
-    // Preço do lanche/produto  
-}
+    	"price": 15	
+    	// Preço do lanche/produto  
+	}
 _________________________________________________________________________________
 
 http://localhost:8080/transaction, Post está nesse Http, get em /transaction/getAll
 
-Para realizar a compra dos lanches/produtos, enviando dinheiro do cliente para a empressa
+Para realizar a compra dos lanches/produtos, enviando dinheiro do cliente para a empressa:
 
-{
-    "companyId": 1,				
-    // Id Da empressa 
+	{
+    	"companyId": 1,				
+    	// Id Da empressa 
 
-    "clientId": 2,				
-    // Id do cliente 
+    	"clientId": 2,				
+    	// Id do cliente 
 
-    "foods": "Hamburguer"			
-    // Produtos comprados, Usando a "," como separador para mandar mais de 1 por vez 
-}
+    	"foods": "Hamburguer"			
+    	// Produtos comprados, Usando a "," como separador para mandar mais de 1 por vez 
+	}
