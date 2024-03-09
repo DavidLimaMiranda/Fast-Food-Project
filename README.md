@@ -17,21 +17,35 @@ http://localhost:8080/MakeOrder/{id}, Http Get passando um Id para encontrar um 
 Pra Criar A empressa de Fast-Food:
 
 {
-	"firstName": "McDonalds",		// nome da empressa
-	"lastName": "Mc",			// Abreviação
-	"email": "company@gmail.com",		// Email (Unico)
-	"balance": 1000,			// Dinheiro da empressa
-	"typeAccount": "COMPANY"		// Tipo da conta criada, Company para empressas
+	"firstName": "McDonalds",		
+ 	// nome da empressa
+	"lastName": "Mc",			
+ 	// Abreviação
+	"email": "company@gmail.com",		
+ 	// Email (Unico)
+  	"password": "1234"
+   	// Senha da conta
+	"balance": 1000,			
+ 	// Dinheiro da empressa
+	"typeAccount": "COMPANY"		
+ 	// Tipo da conta criada, Company para empressas e ter acesso total
 }
 
 Pra Criar os Respectivos Clientes:
 
 {
-    "firstName": "David", 			// Nome do cliente
-    "lastName": "Lima",				// Ultimo nome do cliente 
-    "email": "david@gmail.com",			// Email (Unico)
-    "balance": 40,				// Dinheiro do cliente
-    "typeAccount": "CLIENT"			// Tipo da conta criada, Client para clientes
+    "firstName": "David", 			
+    // Nome do cliente
+    "lastName": "Lima",				
+    // Ultimo nome do cliente 
+    "email": "david@gmail.com",
+    "password": "1234"
+    // Senha da conta
+    // Email (Unico)
+    "balance": 40,				
+    // Dinheiro do cliente
+    "typeAccount": "CLIENT"			
+    // Tipo da conta criada, Client para clientes
 }
 
 ________________________________________________________________________________
@@ -41,10 +55,14 @@ http://localhost:8080/MakeOrder, Post e Get estão nesse Http
 Pra criar Um lanche/Produto:
 
 {
-    "foodName": "Hamburguer",			// Nome do lanche/produto
-    "description": "Hamburguer clássico",	// Descrição do lanche/produto criado
-    "stock": 3,					// Quantidade de lanches/produtos
-    "price": 15					// Preço do lanche/produto
+    "foodName": "Hamburguer",			
+    // Nome do lanche/produto
+    "description": "Hamburguer clássico",	
+    // Descrição do lanche/produto criado
+    "stock": 3,					
+    // Quantidade de lanches/produtos
+    "price": 15					
+    // Preço do lanche/produto
 }
 _________________________________________________________________________________
 
@@ -53,8 +71,10 @@ http://localhost:8080/makeRequest, Post e Get estão nesse Http
 Pra Fazer a compra dos lanches/produtos, enviando dinheiro do cliente para a empressa
 
 {
-    "companyId": 1,				// Id Da empressa
-    "clientId": 2,				// Id do cliente
-    "foods": "Hamburguer"			// Lanches/Produtos comprados, Usando a "," como separador pra mandar mais de 1 por vez
+    "companyId": 1,				
+    // Id Da empressa
+    "clientId": 2,				
+    // Id do cliente
+    "foods": "Hamburguer"			
+    // Produtos comprados, Usando a "," como separador para mandar mais de 1 por vez
 }
-
