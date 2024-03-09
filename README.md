@@ -18,15 +18,20 @@ Para criar um Cliente do Fast-Food:
 
 {
 	"firstName": "McDonalds",		
- 	// nome da empressa
+ 	// nome da empressa/cliente
+  
 	"lastName": "Mc",			
- 	// Abreviação
+ 	// Abreviação/sobrenome
+  
 	"email": "company@gmail.com",		
  	// Email (Unico)
+  
   	"password": "1234"
    	// Senha da conta
+    
 	"balance": 1000,			
- 	// Dinheiro da empressa
+ 	// Dinheiro da empressa/cliente
+  
 	"typeAccount": "COMPANY"		
  	// Tipo da conta criada, "COMPANY" para empressas e ter acesso total, "CLIENT" para clientes.
 }
@@ -37,7 +42,9 @@ http://localhost:8080/auth/login
 Para logar e pegar o Token recebido para fazer outras requisições
 {
     "email": "company@gmail.com",
+    
     "password": "1234"
+    
 }
 ________________________________________________________________________________
 
@@ -47,13 +54,16 @@ Para criar um lanche/Produto:
 
 {
     "foodName": "Hamburguer",			
-    // Nome do lanche/produto \**
+    // Nome do lanche/produto 
+
     "description": "Hamburguer clássico",	
-    // Descrição do lanche/produto criado \**
+    // Descrição do lanche/produto criado
+ 
     "stock": 3,					
-    // Quantidade de lanches/produtos \**
-    "price": 15					
-    // Preço do lanche/produto \**
+    // Quantidade de lanches/produtos 
+
+    "price": 15	
+    // Preço do lanche/produto  
 }
 _________________________________________________________________________________
 
@@ -63,9 +73,11 @@ Para realizar a compra dos lanches/produtos, enviando dinheiro do cliente para a
 
 {
     "companyId": 1,				
-    // Id Da empressa \**
+    // Id Da empressa 
+
     "clientId": 2,				
-    // Id do cliente \**
+    // Id do cliente 
+
     "foods": "Hamburguer"			
-    // Produtos comprados, Usando a "," como separador para mandar mais de 1 por vez \**
+    // Produtos comprados, Usando a "," como separador para mandar mais de 1 por vez 
 }
